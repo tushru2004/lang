@@ -18,7 +18,7 @@ async def ask_question_async(request: PdfRequest):
         print(request)
         question = request.question
         builder = QuestionBuilder()
-        resp = builder.build(question)
+        resp = builder.ask(question)
         return PdfResponse(answer=resp)
 
     except requests.RequestException as e:

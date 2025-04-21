@@ -9,7 +9,7 @@ from langchain_core.prompts import PromptTemplate
 from src.services.langchain.question import CustomRetriever
 
 class QuestionBuilder:
-    def build(self,question):
+    def ask(self, question):
         embeddings = OpenAIEmbeddings()
         pinecone.Pinecone(
             api_key=os.getenv("PINECONE_API_KEY"),
