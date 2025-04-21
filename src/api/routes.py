@@ -22,10 +22,8 @@ async def ask_question_async(request: PdfRequest):
         return PdfResponse(answer=resp)
 
     except requests.RequestException as e:
-        # Handle network or request errors
         raise HTTPException(status_code=500, detail=f"Error calling external API: {str(e)}")
     except ValueError as e:
-        # Handle JSON parsing errors
         raise HTTPException(status_code=500, detail=f"Invalid response format: {str(e)}")
 
 @app.get("/")
