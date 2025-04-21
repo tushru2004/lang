@@ -1,1 +1,7 @@
- __pycache__/
+__pycache__/
+.idea/
+.python-version
+Pipfile.lock
+langenv/
+.env
+src/services/llm/__pycache__/
